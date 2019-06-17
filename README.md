@@ -9,15 +9,18 @@ Library needed to run the codes:
 - [Keras](https://keras.io/#installation)
 - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
 
+Download the data from stanford website and ready the .tgz file in the same directory as all .ipynb notebooks.
 
 ## Running the Code
-All documentation is inside the notebooks, so you should be able to understand what each line of code does.
+All documentation is inside the notebooks, so you should be able to understand what each line of code does. You may required to change the directory path inside the code.
 
 ### Process Data
 To process and split the data into train, validation and test, use:
 ```
 preprocess.ipynb
 ```
+The training and validation data is split 80:20. Aside from splitting, I also augment the training data with sharpen. This increased the validation and test accuracy slightly.
+
 ### Train and Validation
 To train and validate the model, use:
 ```
@@ -30,4 +33,4 @@ test.ipynb
 ```
 
 ## Accuracy
-Accuracy achieved is approx. 89% on valididation data and 76% on test data so fine-tuning is still needed. Model used is Densenet121.
+Accuracy achieved is approx. 89% on valididation data and 76% on test data so more fine-tuning is still needed. Model used is Densenet121.
